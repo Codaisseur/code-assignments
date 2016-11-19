@@ -22,6 +22,7 @@ gem 'bson_ext'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
+  gem 'mongoid-rspec', github: 'gurix/mongoid-rspec', branch: 'mongoid_6_support'
   gem 'shoulda-matchers'
 end
 
