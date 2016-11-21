@@ -24,6 +24,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'mongoid-rspec', github: 'gurix/mongoid-rspec', branch: 'mongoid_6_support'
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :development do
