@@ -6,43 +6,31 @@
 
 This project uses [Feathers](http://feathersjs.com). An open source web  framework for building modern real-time applications.
 
-## Getting Started
+## Endpoints for authentication
 
-Getting up and running is as easy as 1, 2, 3.
-
-1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Install your dependencies
-
-    ```
-    cd path/to/code-assignments; npm install
-    ```
-
-3. Start your app
-
-    ```
-    npm start
-    ```
-
-## Testing
-
-Simply run `npm test` and all your tests in the `test/` directory will be run.
-
-## Scaffolding
-
-Feathers has a powerful command line interface. Here are a few things it can do:
-
-```
-$ npm install -g feathers-cli             # Install Feathers CLI
-
-$ feathers generate service               # Generate a new Service
-$ feathers generate hook                  # Generate a new Hook
-$ feathers generate model                 # Generate a new Model
-$ feathers help                           # Show all commands
+`POST /users`
+Creating an account with local authentication
+```bash
+curl -X POST \
+-H 'Content-Type: application/json' \
+-d '{ "email": "email@example.com", "password": "mypassword" }' \
+http://localhost:3030/users
 ```
 
-## Help
+`POST /auth/local`
+Login with local authentication using the above credentials
+```bash
+curl -X POST \
+-H 'Content-Type: application/json' \
+-d '{ "email": "email@example.com", "password": "mypassword" }' \
+http://localhost:3030/auth/local
+```
 
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
+    TODO:
+
+    Github OAuth2: POST /auth/github
+    Google OAuth2: POST /auth/google
+
 
 ## Changelog
 
