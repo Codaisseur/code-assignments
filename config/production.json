@@ -1,0 +1,26 @@
+{
+  "host": "code-authentication-app.feathersjs.com",
+  "port": 80,
+  "mongodb": "DATABASE_URL",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "FEATHERS_AUTH_SECRET"
+    },
+    "local": {},
+    "github": {
+      "clientID": "currently no prod config",
+      "clientSecret": "currently no prod config",
+      "permissions": {
+        "scope": []
+      }
+    },
+    "google": {
+      "clientID": "currently no prod config",
+      "clientSecret": "currently no prod config",
+      "permissions": {
+        "scope": ["user"]
+      }
+    }
+  }
+}

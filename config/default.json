@@ -1,0 +1,23 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "mongodb": "mongodb://localhost:27017/codeAuthentication",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "e0uBeS2Gf+1WqcZ6czYxlIucr7QPQ6L1YH38fhioxiVCGiuektUpiCXaiqaewVQcvxL4MyXkiBDjQkX9gdfk8g=="
+    },
+    "local": {},
+    "github": {
+      "clientID": "67e4a6a8d92c075077c6",
+      "clientSecret": "4aeeb94ecfdc30c08257ba2bcd58ead6e385791c"
+    },
+    "google": {
+      "clientID": "346786612419-u99ddu266fd98bm47b2lu6hm9btrrh7j.apps.googleusercontent.com",
+      "clientSecret": "o6DQabrQBOAivVzQjholX4_o",
+      "permissions": {
+        "scope": ["email", "profile"]
+      }
+    }
+  }
+}
