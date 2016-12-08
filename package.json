@@ -1,6 +1,6 @@
 {
-  "name": "code-authentication",
-  "description": "Authentication for code-runner services",
+  "name": "code-assignments",
+  "description": "Assignments and Authentication for code-runner services",
   "version": "0.0.0",
   "homepage": "",
   "main": "src/",

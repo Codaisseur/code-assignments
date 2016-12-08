@@ -1,4 +1,4 @@
-# code-authentication
+# code-assignments
 
 > Authentication for code-runner services
 
@@ -12,13 +12,13 @@ Getting up and running is as easy as 1, 2, 3.
 
 1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
 2. Install your dependencies
-    
+
     ```
-    cd path/to/code-authentication; npm install
+    cd path/to/code-assignments; npm install
     ```
 
 3. Start your app
-    
+
     ```
     npm start
     ```
