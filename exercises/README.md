@@ -1,4 +1,4 @@
-# code-exercises
+# Exercises
 
 > Exercise microservice for the code-runner project.
 

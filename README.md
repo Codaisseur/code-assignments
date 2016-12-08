@@ -1,6 +1,4 @@
-# Authentication
-
-_Authentication for code-runner services_
+# Code-Assignments
 
 ## Running the API
 
@@ -36,7 +34,6 @@ http://localhost:3030/auth/local
 
     Github OAuth2: POST /auth/github
     Google OAuth2: POST /auth/google
-
 
 ## Changelog
 
