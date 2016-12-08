@@ -1,6 +1,12 @@
 # code-assignments
 
-> Authentication for code-runner services
+_Authentication for code-runner services_
+
+## Running the API
+
+```bash
+> docker-compose up dev
+```
 
 ## About
 
