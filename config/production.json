@@ -1,6 +1,6 @@
 {
   "host": "code-authentication-app.feathersjs.com",
-  "port": 80,
+  "port": 5000,
   "mongodb": "DATABASE_URL",
   "public": "../public/",
   "auth": {
