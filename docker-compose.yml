@@ -1,7 +1,20 @@
 version: '2'
 services:
-  dev:
-    image: quay.io/codaisseur/code-assignments
+  api:
+    image: quay.io/codaisseur/practice-api
+    entrypoint: ''
+    environment:
+      - DATABASE_URL=mongodb://mongodb:27017/
+      - EXERCISES_API_URL=http://exercises:5001
+    command: npm start --no-deprecation
+    depends_on:
+      - mongodb
+      - exercises
+    ports:
+      - "5000:5000"
+
+  exercises:
+    image: quay.io/codaisseur/practice-api-exercises
     entrypoint: ''
     environment:
       - DATABASE_URL=mongodb://mongodb:27017/
@@ -9,7 +22,7 @@ services:
     depends_on:
       - mongodb
     ports:
-      - "5000:5000"
+      - "5001:5001"
 
   mongodb:
     image: mongo
