@@ -51,7 +51,7 @@ class Service {
 
   makeRequest() {
     return request.defaults({
-      baseUrl: `${Process.env.EXERCISES_API_URL}/courses`,
+      baseUrl: `${Process.env.EXERCISES_API_URL}/courses` || 'http://localhost:5001',
         json: true
     });
   }

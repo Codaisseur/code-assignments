@@ -1,5 +1,7 @@
 'use strict';
 
+const assignment = require('./assignment');
+
 const course = require('./course');
 
 const mongoose = require('mongoose');
@@ -10,4 +12,5 @@ module.exports = function() {
   mongoose.Promise = global.Promise;
 
   app.configure(course);
+  app.configure(assignment);
 };
