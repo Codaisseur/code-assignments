@@ -1,0 +1,38 @@
+#!/bin/bash
+
+REGISTRY=quay.io
+ORG=codaisseur
+BRANCH=`git rev-parse --abbrev-ref HEAD`
+
+if [ -z $1 ]; then
+  echo "Choose an app to push:
+
+scripts/push api
+
+scripts/push exercises
+"
+  exit 1
+fi
+
+if [ ! -d $1 ]; then
+  echo "$1 is not a recognized app."
+  exit 2
+fi
+
+if [ "$BRANCH" = "master" ]; then
+  VERSION=`grep version $1/package.json | perl -pe 's/"version"://; s/",?//g; s/\s+//; s/",$$//'`
+else
+  VERSION="dev"
+fi
+
+if [ $1 = "api" ]; then
+  APP="practice-${1}"
+else
+  APP="practice-api-${1}"
+fi
+
+echo "Building ${APP}:${VERSION}..."
+
+cp Dockerfile .dockerignore $1/
+docker build -t ${REGISTRY}/${ORG}/${APP}:${VERSION} $1/
+rm $1/Dockerfile $1/.dockerignore

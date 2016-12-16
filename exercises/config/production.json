@@ -1,0 +1,6 @@
+{
+  "host": "code-exercises-api-app.feathersjs.com",
+  "port": 80,
+  "mongodb": "DATABASE_URL",
+  "public": "../public/"
+}
