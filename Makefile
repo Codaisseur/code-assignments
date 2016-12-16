@@ -1,5 +1,7 @@
 all: build-api build-exercises
 
+build-all: build-api build-exercises
+
 push-all: push-api push-exercises
 
 build-api:
