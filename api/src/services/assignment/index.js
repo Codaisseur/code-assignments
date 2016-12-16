@@ -51,7 +51,7 @@ class Service {
 
   makeRequest() {
     return request.defaults({
-      baseUrl: `${Process.env.EXERCISES_API_URL}/courses` || 'http://localhost:5001',
+      baseUrl: `${Process.env.EXERCISES_API_URL}/assignments` || 'http://localhost:5001',
         json: true
     });
   }
@@ -61,16 +61,16 @@ module.exports = function(){
   const app = this;
 
   // Initialize our service with any options it requires
-  app.use('/courses', new Service());
+  app.use('/assignments', new Service());
 
   // Get our initialize service to that we can bind hooks
-  const courseService = app.service('/courses');
+  const assignmentService = app.service('/assignments');
 
   // Set up our before hooks
-  courseService.before(hooks.before);
+  assignmentService.before(hooks.before);
 
   // Set up our after hooks
-  courseService.after(hooks.after);
+  assignmentService.after(hooks.after);
 };
 
 module.exports.Service = Service;
